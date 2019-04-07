@@ -7,8 +7,8 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 
-import {SQLite} from '@ionic-native/sqlite';
-import {Toast} from '@ionic-native/toast';
+import {SQLite} from '@ionic-native/sqlite/ngx';
+import {Toast} from '@ionic-native/toast/ngx';
 import {AdddataPage} from '../pages/adddata/adddata';
 import {EditdataPage} from '../pages/editdata/editdata';
 
@@ -32,7 +32,9 @@ import {EditdataPage} from '../pages/editdata/editdata';
     EditdataPage
   ],
   providers: [
-    StatusBar,SQLite,Toast,
+    StatusBar,
+    SQLite,
+    Toast,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
